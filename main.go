@@ -22,17 +22,6 @@ const version = "0.0.1"
 
 var revision = "HEAD"
 
-type relayFlags []string
-
-func (i *relayFlags) String() string {
-	return "relay name"
-}
-
-func (i *relayFlags) Set(value string) error {
-	*i = append(*i, value)
-	return nil
-}
-
 func pksk(nsec string) (string, string, error) {
 	if nsec == "" {
 		return "", "", errors.New("NOSTR_MUTE_NSEC is not set")
