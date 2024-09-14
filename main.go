@@ -288,11 +288,7 @@ func exists(pp [][]string, p []string) bool {
 		return false
 	}
 	for _, t := range pp {
-		tt := []string(t)
-		if len(tt) != 2 {
-			continue
-		}
-		if t[0] != p[0] || t[1] != p[1] {
+		if !slices.Equal(p, t) {
 			continue
 		}
 		return true
