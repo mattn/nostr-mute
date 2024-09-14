@@ -283,7 +283,7 @@ func doImport(cCtx *cli.Context) error {
 	return ms.Publish(ctx, ev)
 }
 
-func exists[T [][]string](pp T, p []string) bool {
+func exists(pp [][]string, p []string) bool {
 	if len(p) != 2 {
 		return false
 	}
